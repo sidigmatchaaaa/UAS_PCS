@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/produkFragment">
+
+    <fragment
+        android:id="@+id/produkFragment"
+        android:name="com.aplikasi.apptoko.ProdukFragment"
+        android:label="fragment_produk"
+        tools:layout="@layout/fragment_produk" />
+    <fragment
+        android:id="@+id/supplierFragment"
+        android:name="com.aplikasi.apptoko.SupplierFragment"
+        android:label="fragment_supplier"
+        tools:layout="@layout/fragment_supplier" />
+    <fragment
+        android:id="@+id/transaksiFragment"
+        android:name="com.aplikasi.apptoko.TransaksiFragment"
+        android:label="fragment_transaksi"
+        tools:layout="@layout/fragment_transaksi" />
+    <fragment
+        android:id="@+id/laporanFragment"
+        android:name="com.aplikasi.apptoko.LaporanFragment"
+        android:label="fragment_laporan"
+        tools:layout="@layout/fragment_laporan" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.aplikasi.apptoko.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/produkFormFragment"
+        android:name="com.aplikasi.apptoko.ProdukFormFragment"
+        android:label="fragment_produk_form"
+        tools:layout="@layout/fragment_produk_form" >
+        <argument
+            android:name="argsProduk"
+            app:argType="com.aplikasi.apptoko.response.produk.Produk"
+            app:nullable="true" />
+        <argument
+            android:name="argsStatus"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/bayarFragment"
+        android:name="com.aplikasi.apptoko.BayarFragment"
+        android:label="fragment_bayar"
+        tools:layout="@layout/fragment_bayar" >
+        <argument
+            android:name="argsCart"
+            app:argType="com.aplikasi.apptoko.response.cart.Cart" />
+        <argument
+            android:name="argsTotal"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/bayarSupplierFragment"
+        android:name="com.aplikasi.apptoko.BayarSupplierFragment"
+        android:label="fragment_bayar_supplier"
+        tools:layout="@layout/fragment_bayar_supplier" >
+        <argument
+            android:name="argsCart"
+            app:argType="com.aplikasi.apptoko.response.cart.Cart" />
+        <argument
+            android:name="argsTotal"
+            app:argType="string" />
+    </fragment>
+</navigation>
